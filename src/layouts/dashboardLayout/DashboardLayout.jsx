@@ -2,7 +2,10 @@ import './dashboardLayout.css';
 
 const DashboardLayout = () => {
     return (
-        <div>DashboardLayout</div>
+        <div className='dashboardLayout'>
+            <div className="menu"></div>
+            <div className="content"></div>
+        </div>
     )
 }
 

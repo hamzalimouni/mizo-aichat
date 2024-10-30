@@ -7,27 +7,33 @@ import {
 import Home from "./pages/home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Chat from "./pages/chat/Chat";
+import RootLayout from "./layouts/rootLayout/RootLayout";
+import DashboardLayout from "./layouts/dashboardLayout/DashboardLayout";
 
 const App = () => {
 
   const router = createBrowserRouter([
   {
-    path: "/",
-    element: (
-      <Home />
-    ),
-  },
-  {
-    path: "/dashboard",
+    element: <RootLayout />,
     children: [
       {
-        path: "/dashboard",
-        element: <Dashboard />
+        path: "/",
+        element: <Home />
+        ,
       },
       {
-        path: "/dashboard/chats/:id",
-        element: <Chat />
-      }
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: "/dashboard",
+            element: <Dashboard />
+          },
+          {
+            path: "/dashboard/chats/:id",
+            element: <Chat />
+          }
+        ]
+      },
     ]
   },
 ]);
