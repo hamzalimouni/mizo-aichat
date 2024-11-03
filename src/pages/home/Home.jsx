@@ -11,7 +11,15 @@ const Home = () => {
                 <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda omnis corrupti quam impedit qui, laudantium laboriosam.</h3>
                 <Link to="/dashboard">Get Started</Link>
             </div>
-            <div className="right"></div>
+            <div className="right">
+                <div className="imgContainer">
+                    <div className="bgContainer">
+                        <div className="bg"></div>
+                    </div>
+                    <img src="/bot.png" alt="Bot image" />
+                    <div className="chat"></div>
+                </div>
+            </div>
         </div>
     )
 }
